@@ -1,0 +1,20 @@
+{
+  "name": "@wildpeaks/proto-arc",
+  "version": "1.0.0",
+  "description": "PROTO Arc",
+  "main": "src/proto.Arc.wrl",
+  "files": [
+    "src/proto.Arc.wrl"
+  ],
+  "repository": "https://github.com/wildpeaks/proto-arc",
+  "keywords": [
+    "wildpeaks",
+    "vrml"
+  ],
+  "author": "Cecile Muller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wildpeaks/proto-arc/issues"
+  },
+  "homepage": "https://github.com/wildpeaks/proto-arc#readme"
+}

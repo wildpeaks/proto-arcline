@@ -1,0 +1,9 @@
+* -text
+
+.editorconfig   text
+.gitattributes  text
+.gitignore      text
+*.md            text
+*.json          text
+*.wrl           text
+*.png           binary
