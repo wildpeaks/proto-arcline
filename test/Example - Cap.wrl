@@ -5,7 +5,7 @@ EXTERNPROTO ArcLine [
 	exposedField  SFFloat  toAngle
 	exposedField  SFFloat  radius
 	exposedField  SFFloat  tesselation
-	exposedField  SFBool   startCap
+	exposedField  SFBool   beginCap
 	exposedField  SFBool   endCap
 	field         SFBool   solid
 ] "../src/proto.ArcLine.wrl#ArcLine"
@@ -62,7 +62,7 @@ Transform {
 			}
 		}
 		geometry ArcLine {
-			startCap TRUE
+			beginCap TRUE
 			endCap FALSE
 			fromAngle -2
 			toAngle 2
@@ -80,7 +80,7 @@ Transform {
 			}
 		}
 		geometry ArcLine {
-			startCap FALSE
+			beginCap FALSE
 			endCap TRUE
 			fromAngle -2
 			toAngle 2
@@ -98,7 +98,7 @@ Transform {
 			}
 		}
 		geometry ArcLine {
-			startCap FALSE
+			beginCap FALSE
 			endCap FALSE
 			fromAngle -2
 			toAngle 2
@@ -116,7 +116,7 @@ Transform {
 			}
 		}
 		geometry ArcLine {
-			startCap TRUE
+			beginCap TRUE
 			endCap TRUE
 			fromAngle -2
 			toAngle 2

@@ -5,7 +5,7 @@ EXTERNPROTO ArcLine [
 	exposedField  SFFloat  toAngle
 	exposedField  SFFloat  radius
 	exposedField  SFFloat  tesselation
-	exposedField  SFBool   startCap
+	exposedField  SFBool   beginCap
 	exposedField  SFBool   endCap
 	field         SFBool   solid
 ] "../src/proto.ArcLine.wrl#ArcLine"

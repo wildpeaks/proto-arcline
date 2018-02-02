@@ -5,8 +5,8 @@ PROTO ArcLine [
 	exposedField  SFFloat  toAngle      6.28318
 	exposedField  SFFloat  radius       1
 	exposedField  SFFloat  tesselation  16
-	exposedField  SFBool   startCap     FALSE
-	exposedField  SFBool   endCap       FALSE
+	exposedField  SFBool   beginCap     TRUE
+	exposedField  SFBool   endCap       TRUE
 ]{
 	DEF geometry IndexedLineSet {
 		coord DEF coords Coordinate {}
@@ -20,7 +20,7 @@ PROTO ArcLine [
 		exposedField  SFFloat  toAngle      IS toAngle
 		exposedField  SFFloat  radius       IS radius
 		exposedField  SFFloat  tesselation  IS tesselation
-		exposedField  SFBool   startCap     IS startCap
+		exposedField  SFBool   beginCap     IS beginCap
 		exposedField  SFBool   endCap       IS endCap
 
 		directOutput TRUE
@@ -43,10 +43,10 @@ PROTO ArcLine [
 					}
 					coordIndex[tesselation + 1] = -1;
 				}
-				if (startCap || endCap){
+				if (beginCap || endCap){
 					var originIndex = positions.length;
 					positions[originIndex] = new SFVec3f();
-					if (startCap){
+					if (beginCap){
 						coordIndex[coordIndex.length] = originIndex;
 						coordIndex[coordIndex.length] = 0;
 						coordIndex[coordIndex.length] = -1;
@@ -66,7 +66,7 @@ PROTO ArcLine [
 		function toAngle(){}
 		function radius(){}
 		function tesselation(){}
-		function startCap(){}
+		function beginCap(){}
 		function endCap(){}
 		function initialize(){
 			refresh();

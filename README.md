@@ -8,7 +8,7 @@ similar to [PROTO Arc](https://github.com/wildpeaks/proto-arc).
 		exposedField  SFFloat  toAngle
 		exposedField  SFFloat  radius
 		exposedField  SFFloat  tesselation
-		exposedField  SFBool   startCap
+		exposedField  SFBool   beginCap
 		exposedField  SFBool   endCap
 	] "proto.ArcLine.wrl#ArcLine"
 
@@ -65,14 +65,14 @@ Definition:
 
 -------------------------------------------------------------------------------
 
-## Property `startCap`
+## Property `beginCap`
 
 When `TRUE`, it adds a line segment from the center of the circle to the beginning of the curve.
 
 Definition:
  - Field Type: `exposedField`
  - Data Type: `SFBool`
- - Default Value: `FALSE`
+ - Default Value: `TRUE`
 
 
 -------------------------------------------------------------------------------
@@ -84,7 +84,7 @@ When `TRUE`, it adds a line segment from the center of the circle to the end of 
 Definition:
  - Field Type: `exposedField`
  - Data Type: `SFBool`
- - Default Value: `FALSE`
+ - Default Value: `TRUE`
 
 
 -------------------------------------------------------------------------------
