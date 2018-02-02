@@ -1,0 +1,104 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO ArcLine [
+	exposedField  SFFloat  fromAngle
+	exposedField  SFFloat  toAngle
+	exposedField  SFFloat  radius
+	exposedField  SFFloat  tesselation
+	exposedField  SFBool   startCap
+	exposedField  SFBool   endCap
+	field         SFBool   solid
+] "../src/proto.ArcLine.wrl#ArcLine"
+
+PROTO Debug [
+	exposedField  SFColor     color     0 0 0
+	exposedField  SFRotation  rotation  0 0 1 0
+]{
+	Transform {
+		rotation IS	rotation
+		children [
+			Transform {
+				translation	0 5 0
+				children Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0 0 0
+							emissiveColor IS color
+						}
+					}
+					geometry Cylinder {
+						radius 0.005
+						height 10
+					}
+				}
+			}
+		]
+	}
+}
+
+WorldInfo {
+	title "Tesselation"
+}
+
+Background {
+	skyColor .2 .2 .2
+}
+
+Viewpoint {
+	position 0.001 0.119 3.423
+	orientation 0.000 0.000 1.000 0.000
+	fieldOfView 0.927
+	description	"Default"
+}
+
+
+Transform {
+	translation	-2.1 0 0
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0 0 0
+				emissiveColor 1 0 0
+			}
+		}
+		geometry ArcLine {
+			tesselation	4
+			fromAngle -2
+			toAngle 2
+		}
+	}
+}
+
+Transform {
+	translation	0 0 0
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0 0 0
+				emissiveColor 0 1 0
+			}
+		}
+		geometry ArcLine {
+			tesselation	8
+			fromAngle -2
+			toAngle 2
+		}
+	}
+}
+
+Transform {
+	translation	2.1 0 0
+	children Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor 0 0 0
+				emissiveColor 0 0 1
+			}
+		}
+		geometry ArcLine {
+			tesselation	32
+			fromAngle -2
+			toAngle 2
+		}
+	}
+}
